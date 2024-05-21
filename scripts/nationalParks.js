@@ -3,37 +3,80 @@
 
 // buttons
 
-const searchByLocationButton = document.getElementById("searchByLocationButton");
-const searchByParkTypeButton = document.getElementById("searchByParkTypeButton");
+const locationDropdownMenu = document.getElementById("locationDropdownMenu");
+const parkTypeDropdownMenu = document.getElementById("parkTypeDropdownMenu");
+
+const locationSubmitBtn = document.getElementById("locationSubmitBtn");
+const parkTypeSubmitBtn = document.getElementById("parkTypeSubmitBtn");
+
+// text values
+
+const displayData = document.getElementById("displayData");
 
 
-const submit1Button = document.getElementById("submitBtn1");
-const submit2Button = document.getElementById("submitBtn2");
+
+window.onload = function(){
+
+    console.log("onload");
+    loadLocationDropdown();
+    loadParkTypeDropdown();
+    locationSubmitBtn.onclick = onLocationSubmitBtnClicked;
+    parkTypeSubmitBtn.onclick = onParkTypeSubmitBtnClicked;
+};
 
 
-window.onload = init;
+
+// load dropdowns
+
+function loadLocationDropdown (){
+
+    for (let i = 0; i < locationsArray.length; i++){
+        let option = new Option (locationsArray[i], locationsArray[i]);
+        locationDropdownMenu.appendChild(option);
+    }
+};
 
 
-function init (){
-    searchByLocationButton.onclick = onsearchByLocationButtonClicked;
-    searchByParkTypeButton.onclick = onsearchByParkTypeButtonClicked;
+function loadParkTypeDropdown (){
+
+    for (let i = 0; i < parkTypesArray.length; i++){
+        let option = new Option (parkTypesArray[i], parkTypesArray[i]);
+        parkTypeDropdownMenu.appendChild(option);
+    }
+};
+
+
+
+// wire submit buttons
+
+function onLocationSubmitBtnClicked (){
+    displayLocationData();
+    displayParkTypeData();
 }
 
 
-function onsearchByLocationButtonClicked(){
-    locationsArray.forEach(location => {
-        let option = document.createElement("option");
-        option.value = location;
-        option.innerHTML = location;
-    })
+function onParkTypeSubmitBtnClicked (){
 
 }
 
-console.log(locationsArray);
 
+// display results from dropdowns
 
-function onsearchByParkTypeButtonClicked(){
-    //loop park types
-}
+function displayLocationData (){
+    
+    for (let i = 0; i < nationalParksArray.length; i++){
+        if (nationalParksArray[i].State == locationDropdownMenu.value){
+            displayData.innerHTML = nationalParksArray[i].LocationName
+        }
+    }
+};
 
-console.log("good morning");
+//??????????? display parks based on the type given its name
+function displayParkTypeData (){
+
+    for (let i = 0; i < parkTypesArray.length; i++){
+        if (parkTypesArray[i].LocationName == parkTypeDropdownMenu.value){
+            displayData.innerHTML = parkTypesArray[i].LocationName
+        }
+    }
+};

@@ -55,78 +55,44 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" id="searchByLocationButton" data-bs-toggle="dropdown">
-                            Search by location
-                        </button>
-                        <ul class="dropdown-menu"></ul>
-                        <input type="submit" value="Submit" id="submit1Button">
-                    </div>
+                    <select id="locationDropdownMenu">
+                        <option>Search by location</option>
+                    </select>
+                    <input type="submit" value="Submit" id="locationSubmitBtn">
                 </div>
             </div>
         </div>
-
-        <!-- new code, possibly replace the above -->
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col">
-                    <div id="controls">
-                        <label for="searchType">Search By: </label>
-                        <select id="searchType">
-                            <option value="location">Location</option>
-                            <option value="type">Park Type</option>
-                        </select>
-                        <div id="locationSearch">
-                            <label for="location">Select Location: </label>
-                            <select id="location"></select>
-                        </div>
-                        <div id="typeSearch" style="display: none;">
-                            <label for="parkType">Select Park Type: </label>
-                            <select id="parkType"></select>
-                        </div>
-                        <button id="searchButton">Search</button>
-                        <button id="viewAllButton">View All National Parks</button>
-                    </div>
-                </div>
-            </div>
-            <div id="nationalParkRow" class="row mt-5"></div>
-        </div>
-
-        <ul>
-            <li>Mmonse</li>
-            <li>Mmonse</li>
-            <li>Mmonse</li>
-            <li>Mmonse</li>
-            <li>Mmonse</li>
-        </ul>
-
-        <!-- Search by park type dropdown -->
+      
+        <!--Search by park type dropdown -->
 
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" id="searchByParkTypeButton" data-bs-toggle="dropdown">
-                            Search by park type
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Link 1</a></li>
-                            <li><a class="dropdown-item" href="#">Link 2</a></li>
-                            <li><a class="dropdown-item" href="#">Link 3</a></li>
-                        </ul>
-                        <input type="submit" value="Submit" id="submit2Button">
-                    </div>
+                    <select id="parkTypeDropdownMenu">
+                        <option>Search by park type</option>
+                    </select>
+                    <input type="submit" value="Submit" id="parkTypeSubmitBtn">
                 </div>
             </div>
         </div>
+    
+        <!-- Display data -->
 
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p id="displayData"></p>
+                </div>
+            </div>
+        </div>
 
 
 
     </main>
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
     <script src="./scripts/locationData.js"></script>
+    <script src="./scripts/nationalParkData.js"></script>
     <script src="./scripts/nationalParks.js"></script>
     <script src="./scripts/parkTypeData.js"></script>
 
