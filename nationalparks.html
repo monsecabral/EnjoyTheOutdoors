@@ -40,33 +40,26 @@
 
     <main>
 
-        <!-- This will be my secondary header of a scenic image with National Parks Search over it -->
-
-        <div class="my-5">
-            <div class="p-5 text-center bg-body-tertiary">
-                <div class="container py-5">
-                    <h1 class="text-body-emphasis">National Parks Search</h1>
-                </div>
-            </div>
-        </div>
-
-        <!-- Search by location dropdown -->
+        <!-- This will be a div of a scenic image with National Parks Search over it -->
 
         <div class="container">
+            <div class="my-5">
+                <div class="p-5 text-center bg-body-tertiary">
+                    <div class="container py-5">
+                        <h1 class="text-body-emphasis">National Parks Search</h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search by dropdowns -->
+
             <div class="row">
                 <div class="col">
                     <select id="locationDropdownMenu">
                         <option>Search by location</option>
                     </select>
                     <input type="submit" value="Submit" id="locationSubmitBtn">
-                </div>
-            </div>
-        </div>
-      
-        <!--Search by park type dropdown -->
-
-        <div class="container">
-            <div class="row">
+                </div>                
                 <div class="col">
                     <select id="parkTypeDropdownMenu">
                         <option>Search by park type</option>
@@ -75,27 +68,22 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Display data -->
 
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p id="displayData"></p>
-                </div>
+        <div id="parkListRow" class="row">
+            <div class="col" id="outputCol">
             </div>
         </div>
 
-
-
     </main>
 
-    <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- scripts -->
     <script src="./scripts/locationData.js"></script>
     <script src="./scripts/nationalParkData.js"></script>
-    <script src="./scripts/nationalParks.js"></script>
     <script src="./scripts/parkTypeData.js"></script>
-
+    <script src="./scripts/nationalParks.js"></script>
+    <script src="./scripts/nationalParksFormatCards.js"></script>
 </body>
 
 </html>

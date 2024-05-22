@@ -40,7 +40,7 @@
 
     <main>
 
-        <!-- This will be my secondary header of a scenic image with National Parks Search over it -->
+        <!-- This will be a div of a scenic image with Mountain Information over it -->
 
         <div class="my-5">
             <div class="p-5 text-center bg-body-tertiary">
@@ -55,25 +55,24 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                            Select mountain
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Link 1</a></li>
-                            <li><a class="dropdown-item" href="#">Link 2</a></li>
-                            <li><a class="dropdown-item" href="#">Link 3</a></li>
-                        </ul>
-                        <input type="submit" value="Submit">
-                    </div>
-                </div>
+                    <select id="mountainDropdownMenu">
+                        <option>Search by mountain</option>
+                    </select>
+                    <input type="submit" value="Submit" id="mountainSubmitBtn">
+                </div>                
             </div>
         </div>
 
 
+        <!-- Insert card div -->
+
     </main>
 
+    <!-- scripts -->
+    
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./scripts/mountainInfo.js"></script>
+    <script src="./scripts/mountainData.js"></script>
 
 </body>
 
