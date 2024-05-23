@@ -26,3 +26,25 @@ function loadMountainDropdown (){
         mountainDropdownMenu.appendChild(option);
     }
 }
+
+
+
+// wire submit button
+
+function onMountainSubmitBtnClicked (){
+    displayMountainData();
+}
+
+
+
+// display results from dropdowns
+
+function displayMountainData(){
+    outputCol.innerHTML = ""
+    for (let i = 0; < mountainsArray.length; i++){
+        if (mountainsArray[i].name == mountainDropdownMenu.value){
+            let mountainDescription = `${mountainsArray[i].name}`
+            outputCol.appendChild(createCard(mountainsArray[i].name));
+        }
+    }
+}
