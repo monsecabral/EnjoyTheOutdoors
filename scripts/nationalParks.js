@@ -11,7 +11,6 @@ const parkTypeSubmitBtn = document.getElementById("parkTypeSubmitBtn");
 
 const outputCol = document.getElementById("outputCol");
 
-// text values (omit)
 
 //const displayData = document.getElementById("displayData");
 
