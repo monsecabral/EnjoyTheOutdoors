@@ -29,4 +29,4 @@ Mountain Information: a fully functional JavaScript integrated page which allows
 
 ## Describe one piece of code
 
-The output for the Mountain Info page vs the National Parks Search page: the difference in using a card vs not.
+The output for the Mountain Info page vs the National Parks Search page: the difference in using a card vs not (go in depth during presentation).
